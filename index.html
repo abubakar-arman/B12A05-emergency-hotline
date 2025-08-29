@@ -19,7 +19,7 @@
                 <h3 class="text-green-800 font-extrabold">Emergency<br>Service</h3>
             </div>
             <div id="stats-container" class="flex gap-4 items-center text-sm">
-                <div id="heart" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span
+                <div id="heart" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span id="heart-count"
                         class="font-bold">0</span><img class="size-5" src="/assets/heart.png" alt=""></div>
                 <div id="coin" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span
                         class="font-bold">100</span><img class="size-5" src="/assets/coin.png" alt=""></div>
@@ -39,7 +39,7 @@
             <div id="card" class="bg-white p-6 rounded-xl drop-shadow-sm">
                 <div class="flex justify-between items-center p-4">
                     <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <button class="btn btn-heart border-0 size-10"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
                 <h4 class="font-bold text-lg">জাতীয় জরুরি সেবা</h4>
                 <p class="text-sm">National Emergency</p>
@@ -57,7 +57,7 @@
             <div id="card" class="bg-white p-6 rounded-xl drop-shadow-sm">
                 <div class="flex justify-between items-center p-4">
                     <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/police.png" alt=""></div>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <button class="btn btn-heart border-0 size-10"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
                 <h4 class="font-bold text-lg">পুলিশ</h4>
                 <p class="text-sm">Police</p>
@@ -76,7 +76,7 @@
                 <div class="flex justify-between items-center p-4">
                     <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/fire-service.png" alt="">
                     </div>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <button class="btn btn-heart border-0 size-10"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
                 <h4 class="font-bold text-lg">ফায়ার সার্ভিস</h4>
                 <p class="text-sm">Fire Service</p>
@@ -94,7 +94,7 @@
             <div id="card" class="bg-white p-6 rounded-xl drop-shadow-sm">
                 <div class="flex justify-between items-center p-4">
                     <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/ambulance.png" alt=""></div>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <button class="btn btn-heart border-0 size-10"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
                 <h4 class="font-bold text-lg">অ্যাম্বুলেন্স</h4>
                 <p class="text-sm">Ambulance</p>
@@ -112,7 +112,7 @@
             <div id="card" class="bg-white p-6 rounded-xl drop-shadow-sm">
                 <div class="flex justify-between items-center p-4">
                     <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <button class="btn btn-heart border-0 size-10"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
                 <h4 class="font-bold text-lg">নারী ও শিশু সহায়তা</h4>
                 <p class="text-sm">Women & Child Helpline</p>
@@ -130,7 +130,7 @@
             <div id="card" class="bg-white p-6 rounded-xl drop-shadow-sm">
                 <div class="flex justify-between items-center p-4">
                     <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <button class="btn btn-heart border-0 size-10"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
                 <h4 class="font-bold text-lg">দুদক</h4>
                 <p class="text-sm">Anti-Corruption</p>
@@ -185,6 +185,7 @@
             </div>
         </section>
     </div>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
