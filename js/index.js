@@ -21,16 +21,11 @@ const addToHistory = function(serviceName, phone){
     historyList.appendChild(histDiv)
 }
 
-const getContactModal = function(serviceName, phone){
-    const coin = getTextInt('coin-count')
-    setText('coin-count', coin-20)
-    console.log(coin)
-
-    document.getElementById('modal-title').innerText = serviceName
-    document.getElementById('modal-text').innerText = phone
+const showModal = function(title, text){
+    document.getElementById('modal-title').innerText = title
+    document.getElementById('modal-text').innerText = text
     const modal = document.getElementById('my_modal_1')
     modal.showModal() 
-    addToHistory(serviceName, phone)
 }
 
 // Implement Heart Count Feature
@@ -43,18 +38,32 @@ for (const btnHeart of btnHearts){
     })
 }
 
+// Implement Calling and Call History Feature
 const btnCalls = document.getElementsByClassName('btn-call')
-
 for (const btnCall of btnCalls){
     btnCall.addEventListener('click', function(e){
         const serviceName = e.target.parentNode.parentNode.querySelector('h4:nth-child(2)').innerText
         const phone = e.target.parentNode.parentNode.querySelector('h4:nth-child(4)').innerText
         console.log(serviceName, phone)
+        
+        const coin = getTextInt('coin-count')
+        if(coin<20){
+            showModal('Insufficient Coin', 'Please earn coins to make calls')
+            return
+        }
+        setText('coin-count', coin-20)
+        console.log(coin)
 
-        getContactModal(serviceName, phone)
+        showModal(serviceName, 'Contact : '+phone)
+        addToHistory(serviceName, phone)
     })
 }
 
 document.getElementById('btn-clear-history').addEventListener('click', function(){
-    document.getElementById('history-list').innerText = ''
+    const historyList = document.getElementById('history-list')
+    if(historyList.childNodes.length){
+        historyList.innerText = ''
+    } else {
+        showModal('Empty List', 'There is nothing to be cleared')
+    }
 })
