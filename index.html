@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Service</title>
 
+    <link rel="stylesheet" href="./styles/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="bg-blue-50">
     <header id="header">
         <nav id="navbar" class="flex justify-between bg-wh px-8 py-4 bg-white">
@@ -16,16 +19,116 @@
                 <h3 class="text-green-800 font-extrabold">Emergency<br>Service</h3>
             </div>
             <div id="stats-container" class="flex gap-4 items-center text-sm">
-                <div id="heart" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span class="font-bold">0</span><img class="size-5" src="/assets/heart.png" alt=""></div>
-                <div id="coin" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span class="font-bold">100</span><img class="size-5" src="/assets/coin.png" alt=""></div>
+                <div id="heart" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span
+                        class="font-bold">0</span><img class="size-5" src="/assets/heart.png" alt=""></div>
+                <div id="coin" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span
+                        class="font-bold">100</span><img class="size-5" src="/assets/coin.png" alt=""></div>
                 <div id="copy" class="bg-blue-50 py-2 px-4 rounded-full font-bold"><span>2</span> Copy</div>
             </div>
-        </nav> 
-        <section id="hero" class="flex flex-col gap-1 items-center bg-gradient-to-r from-green-950 via-green-800 to-green-950 text-white py-4">
+        </nav>
+        <section id="hero"
+            class="flex flex-col gap-1 items-center bg-gradient-to-r from-green-950 via-green-800 to-green-950 text-white py-4">
             <img class="size-18" src="/assets/logo-dark.png" alt="">
             <h2 class="font-extrabold text-xl">জরুরি সেবা ডিরেক্টরি</h2>
-            <p>Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+            <p>Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of
+                Bangladesh</p>
         </section>
     </header>
+    <div id="content">
+        <section id="cards-container" class="m-8 grid grid-cols-3 gap-4 w-2/3">
+            <div id="card" class="bg-white w-xs p-6 rounded-xl drop-shadow-lg">
+                <div class="flex justify-between items-center p-4">
+                    <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </div>
+                <h4 class="font-bold text-lg">জাতীয় জরুরি সেবা</h4>
+                <p class="text-sm">National Emergency</p>
+                <h4 class="font-bold text-lg mt-4 mb-2">999</h4>
+                <span id="tag" class="text-sm bg-gray-200 text-gray-600 p-2 rounded-full">সার্বজনীন</span>
+                <div class="flex justify-between gap-2 mt-4">
+                    <button class="btn w-1/2">
+                        <i class="fa fa-clone" aria-hidden="true"></i>Copy
+                    </button>
+                    <button class="btn bg-green-700 w-1/2 text-white">
+                        <i class="fa fa-phone" aria-hidden="true"></i>Call
+                    </button>
+                </div>
+            </div>
+            <div id="card" class="bg-white w-xs p-6 rounded-xl drop-shadow-lg">
+                <div class="flex justify-between items-center p-4">
+                    <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </div>
+                <h4 class="font-bold text-lg">জাতীয় জরুরি সেবা</h4>
+                <p class="text-sm">National Emergency</p>
+                <h4 class="font-bold text-lg mt-4 mb-2">999</h4>
+                <span id="tag" class="text-sm bg-gray-200 text-gray-600 p-2 rounded-full">সার্বজনীন</span>
+                <div class="flex justify-between gap-2 mt-4">
+                    <button class="btn w-1/2">
+                        <i class="fa fa-clone" aria-hidden="true"></i>Copy
+                    </button>
+                    <button class="btn bg-green-700 w-1/2 text-white">
+                        <i class="fa fa-phone" aria-hidden="true"></i>Call
+                    </button>
+                </div>
+            </div>
+            <div id="card" class="bg-white w-xs p-6 rounded-xl drop-shadow-lg">
+                <div class="flex justify-between items-center p-4">
+                    <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </div>
+                <h4 class="font-bold text-lg">জাতীয় জরুরি সেবা</h4>
+                <p class="text-sm">National Emergency</p>
+                <h4 class="font-bold text-lg mt-4 mb-2">999</h4>
+                <span id="tag" class="text-sm bg-gray-200 text-gray-600 p-2 rounded-full">সার্বজনীন</span>
+                <div class="flex justify-between gap-2 mt-4">
+                    <button class="btn w-1/2">
+                        <i class="fa fa-clone" aria-hidden="true"></i>Copy
+                    </button>
+                    <button class="btn bg-green-700 w-1/2 text-white">
+                        <i class="fa fa-phone" aria-hidden="true"></i>Call
+                    </button>
+                </div>
+            </div>
+            <div id="card" class="bg-white w-xs p-6 rounded-xl drop-shadow-lg">
+                <div class="flex justify-between items-center p-4">
+                    <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </div>
+                <h4 class="font-bold text-lg">জাতীয় জরুরি সেবা</h4>
+                <p class="text-sm">National Emergency</p>
+                <h4 class="font-bold text-lg mt-4 mb-2">999</h4>
+                <span id="tag" class="text-sm bg-gray-200 text-gray-600 p-2 rounded-full">সার্বজনীন</span>
+                <div class="flex justify-between gap-2 mt-4">
+                    <button class="btn w-1/2">
+                        <i class="fa fa-clone" aria-hidden="true"></i>Copy
+                    </button>
+                    <button class="btn bg-green-700 w-1/2 text-white">
+                        <i class="fa fa-phone" aria-hidden="true"></i>Call
+                    </button>
+                </div>
+            </div>
+            <div id="card" class="bg-white w-xs p-6 rounded-xl drop-shadow-lg">
+                <div class="flex justify-between items-center p-4">
+                    <div class="bg-red-100 p-2 rounded-lg"><img class="size-6" src="/assets/emergency.png" alt=""></div>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </div>
+                <h4 class="font-bold text-lg">জাতীয় জরুরি সেবা</h4>
+                <p class="text-sm">National Emergency</p>
+                <h4 class="font-bold text-lg mt-4 mb-2">999</h4>
+                <span id="tag" class="text-sm bg-gray-200 text-gray-600 p-2 rounded-full">সার্বজনীন</span>
+                <div class="flex justify-between gap-2 mt-4">
+                    <button class="btn w-1/2">
+                        <i class="fa fa-clone" aria-hidden="true"></i>Copy
+                    </button>
+                    <button class="btn bg-green-700 w-1/2 text-white">
+                        <i class="fa fa-phone" aria-hidden="true"></i>Call
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="history"></section>
+    </div>
 </body>
+
 </html>
