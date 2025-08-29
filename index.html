@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Service</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>Emergency Service</h1>
+<body class="bg-blue-50">
+    <header id="header">
+        <nav id="navbar" class="flex justify-between bg-wh px-8 py-4 bg-white">
+            <div id="logo-container" class="flex gap-1 items-center">
+                <img class="size-12" src="/assets/logo.png" alt="">
+                <h3 class="text-green-800 font-extrabold">Emergency<br>Service</h3>
+            </div>
+            <div id="stats-container" class="flex gap-4 items-center text-sm">
+                <div id="heart" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span class="font-bold">0</span><img class="size-5" src="/assets/heart.png" alt=""></div>
+                <div id="coin" class="flex gap-2 items-center bg-blue-50 py-2 px-4 rounded-full"><span class="font-bold">100</span><img class="size-5" src="/assets/coin.png" alt=""></div>
+                <div id="copy" class="bg-blue-50 py-2 px-4 rounded-full font-bold"><span>2</span> Copy</div>
+            </div>
+        </nav> 
+    </header>
 </body>
 </html>
