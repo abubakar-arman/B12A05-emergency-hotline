@@ -43,21 +43,6 @@ for (const btnHeart of btnHearts){
     })
 }
 
-const modalText = `
-    <dialog id="my_modal_1" class="modal">
-        <div class="modal-box">
-            <h3 id="modal-title" class="text-lg font-bold"></h3>
-            <p id="modal-text" class="py-4"></p>
-            <div class="modal-action">
-            <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
-            </form>
-            </div>
-        </div>
-    </dialog>`
-document.body.innerHTML += modalText
-
 const btnCalls = document.getElementsByClassName('btn-call')
 
 for (const btnCall of btnCalls){
@@ -71,5 +56,5 @@ for (const btnCall of btnCalls){
 }
 
 document.getElementById('btn-clear-history').addEventListener('click', function(){
-    const historyList = document.getElementById('history-list').innerText = ''
+    document.getElementById('history-list').innerText = ''
 })
