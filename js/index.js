@@ -6,6 +6,20 @@ const getTextInt = function(id){
 const setText = function(id, val){
     document.getElementById(id).innerText = val
 }
+const addToHistory = function(serviceName, phone){
+    const historyList = document.getElementById('history-list')
+    const histDiv = document.createElement('div')
+    const histTemplate = `
+        <div id="item" class="bg-gray-100 rounded-sm p-4 mb-2">
+            <h4 class="font-bold text-sm">${serviceName}</h4>
+            <div class="flex justify-between text-xs">
+                <p id="number">${phone}</p>
+                <p id="timestamp">11:36:58 AM</p>
+            </div>
+        </div>`
+    histDiv.innerHTML = histTemplate
+    historyList.appendChild(histDiv)
+}
 
 const getContactModal = function(serviceName, phone){
     const coin = getTextInt('coin-count')
@@ -15,7 +29,8 @@ const getContactModal = function(serviceName, phone){
     document.getElementById('modal-title').innerText = serviceName
     document.getElementById('modal-text').innerText = phone
     const modal = document.getElementById('my_modal_1')
-    modal.showModal()
+    modal.showModal() 
+    addToHistory(serviceName, phone)
 }
 
 // Implement Heart Count Feature
@@ -52,7 +67,9 @@ for (const btnCall of btnCalls){
         console.log(serviceName, phone)
 
         getContactModal(serviceName, phone)
-        
-    // document.body.removeChild(modalElm)
     })
 }
+
+document.getElementById('btn-clear-history').addEventListener('click', function(){
+    const historyList = document.getElementById('history-list').innerText = ''
+})
