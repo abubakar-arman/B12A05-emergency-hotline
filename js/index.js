@@ -14,7 +14,7 @@ const addToHistory = function(serviceName, phone){
             <h4 class="font-bold text-sm">${serviceName}</h4>
             <div class="flex justify-between text-xs">
                 <p id="number">${phone}</p>
-                <p id="timestamp">11:36:58 AM</p>
+                <p id="timestamp">${new Date().toLocaleTimeString()}</p>
             </div>
         </div>`
     histDiv.innerHTML = histTemplate
@@ -26,6 +26,7 @@ const showModal = function(title, text){
     document.getElementById('modal-text').innerText = text
     const modal = document.getElementById('my_modal_1')
     modal.showModal() 
+    return modal
 }
 
 // Implement Heart Count Feature
@@ -67,3 +68,18 @@ document.getElementById('btn-clear-history').addEventListener('click', function(
         showModal('Empty List', 'There is nothing to be cleared')
     }
 })
+
+// Implement Contact Copy
+const btnCopies = document.getElementsByClassName('btn-copy')
+console.log(btnCopies)
+for (const btnCopy of btnCopies){
+    btnCopy.addEventListener('click', function(e){
+        const copyCount = getTextInt('copy-count')
+        setText('copy-count', copyCount+1)
+
+        const modal = showModal('Clipboard', 'Contact has been copied')
+        setTimeout(() => {
+            modal.close()
+        }, 1000)
+    })
+}
