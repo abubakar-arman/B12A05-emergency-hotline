@@ -21,13 +21,13 @@ const addToHistory = function(serviceName, phone){
     historyList.appendChild(histDiv)
 }
 
-const showModal = function(title, text){
-    document.getElementById('modal-title').innerText = title
-    document.getElementById('modal-text').innerText = text
-    const modal = document.getElementById('my_modal_1')
-    modal.showModal() 
-    return modal
-}
+// const showModal = function(title, text){
+//     document.getElementById('modal-title').innerText = title
+//     document.getElementById('modal-text').innerText = text
+//     const modal = document.getElementById('my_modal_1')
+//     modal.showModal() 
+//     return modal
+// }
 
 // Implement Heart Count Feature
 const btnHearts = document.getElementsByClassName('btn-heart')
@@ -49,13 +49,15 @@ for (const btnCall of btnCalls){
         
         const coin = getTextInt('coin-count')
         if(coin<20){
-            showModal('Insufficient Coin', 'Please earn coins to make calls')
+            alert('Insufficient Coin!\nPlease earn coins to make calls')
+            // showModal('Insufficient Coin', 'Please earn coins to make calls')
             return
         }
         setText('coin-count', coin-20)
         console.log(coin)
 
-        showModal(serviceName, 'Contact : '+phone)
+        alert(`Calling ${serviceName} : ${phone}`)
+        // showModal(serviceName, 'Contact : '+phone)
         addToHistory(serviceName, phone)
     })
 }
@@ -65,7 +67,8 @@ document.getElementById('btn-clear-history').addEventListener('click', function(
     if(historyList.childNodes.length){
         historyList.innerText = ''
     } else {
-        showModal('Empty List', 'There is nothing to be cleared')
+        alert('Empty List!\nThere is nothing to be cleared')
+        // showModal('Empty List', 'There is nothing to be cleared')
     }
 })
 
@@ -77,9 +80,10 @@ for (const btnCopy of btnCopies){
         const copyCount = getTextInt('copy-count')
         setText('copy-count', copyCount+1)
 
-        const modal = showModal('Clipboard', 'Contact has been copied')
-        setTimeout(() => {
-            modal.close()
-        }, 1000)
+        alert('Clipboard\nContact has been copied')
+        // const modal = showModal('Clipboard', 'Contact has been copied')
+        // setTimeout(() => {
+        //     modal.close()
+        // }, 1000)
     })
 }
