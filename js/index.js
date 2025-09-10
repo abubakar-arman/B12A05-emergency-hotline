@@ -74,11 +74,21 @@ document.getElementById('btn-clear-history').addEventListener('click', function(
 
 // Implement Contact Copy
 const btnCopies = document.getElementsByClassName('btn-copy')
-console.log(btnCopies)
+// console.log(btnCopies)
 for (const btnCopy of btnCopies){
-    btnCopy.addEventListener('click', function(e){
+    btnCopy.addEventListener('click', async function(e){
         const copyCount = getTextInt('copy-count')
         setText('copy-count', copyCount+1)
+
+        // const phone = btnCopy.parentNode.parentNode.querySelector('h4:nth-child(4)').innerText
+        const phone = btnCopy.getAttribute('data-copy-source')
+        console.log('copied number to clipboard :', phone)
+
+        try {
+            await navigator.clipboard.writeText(phone)
+        } catch(err){
+            console.log(err)
+        }
 
         alert('Clipboard\nContact has been copied')
         // const modal = showModal('Clipboard', 'Contact has been copied')
